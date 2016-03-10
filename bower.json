@@ -1,0 +1,12 @@
+{
+  "name": "munif",
+  "description": "Site do munif",
+  "version": "2.0.0",
+  "homepage": "http://www.munif.com.br",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0"
+  }
+}

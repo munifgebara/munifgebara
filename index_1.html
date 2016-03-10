@@ -1,10 +1,12 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>munif.com.br</title>
+        <title>munif.com.br - artigos</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="description" content="munif gebara junior" />
-        <meta name="keywords" content="munif gebara junior" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
         <script src="js/jquery.min.js"></script>
         <script src="js/config.js"></script>
         <script src="js/skel.min.js"></script>
@@ -17,19 +19,14 @@
         <!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
         <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
     </head>
-    <body ng-app="myApp">
 
-        <!-- Header -->
-
+    <body class="subpage" ng-app="myApp">
         <div id="header-wrapper">
             <header id="header" class="container">
                 <div class="row">
                     <div class="12u">
-
                         <!-- Logo -->
-
                         <h1><a href="http://munif.com.br" id="logo"><img src="images/logo.png" alt="logo"/>munif.com.br</a></h1>
-
                         <!-- Nav -->
                         <nav id="nav">
                             <a href=".">Home</a>
@@ -37,8 +34,8 @@
                             <a href=".">Professor</a>
                             <!--<a href="twocolumn2.html">Desenvolvedor</a>-->
                             <!--<a href="onecolumn.html">Sobre</a>-->
+                            <!--<a href="#/artigos">Artigos</a>-->
                         </nav>
-
                     </div>
                 </div>
             </header>
@@ -52,7 +49,8 @@
                             <!-- Banner Copy -->
                             <p>Desenvolvedor, professor e pesquisador</p>
                             <a href="http://github.com/munifgebara" class="button-big">GitHub do Munif</a>
-                            <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4767858Y9" class="button-big">Currículo Lattes</a>
+                            <a href="http://munif.com.br/munifold" class="button-big">Versão Anterior</a>
+
                         </div>
                         <div class="6u">
 
@@ -66,81 +64,39 @@
         </div>
 
 
-        <!-- Features -->
-        <div id="features-wrapper">
-            <div id="features">
-                <div class="container">
-                    Últimos Posts
-                    <div ng-view></div>
-                </div>
-            </div>
-        </div>
+
+
+
+
 
         <!-- Content -->
         <div id="content-wrapper">
             <div id="content">
                 <div class="container">
                     <div class="row">
-                        <div class="4u">
+                        <div class="9u">
 
-                            <!-- Box #1 -->
-                            <section>
-                                <header>
-                                    <h2>Sobre o Munif</h2>
-                                    <h3>Munif Gebara Junior</h3>
-                                </header>
-                                <a href="#" class="feature-image"><img src="images/pic05.jpg" alt="" /></a>
-                                <p>
-                                    Começou a programar em 1983, se formou em Ciência da Computação na UEM em 1997 e concluiu o mestrado em 2001 na UTFPR em Robótica, Informática Industrial. 
-                                    Desenvolve software comercialmente desde 1997 e leciona no ensino superior desde 2001. 
-                                </p>
-                            </section>
+                            <!-- Main Content -->
+                            <div ng-view></div>
 
                         </div>
-                        <div class="4u">
+                        <div class="3u">
 
-                            <!-- Box #2 -->
+                            <!-- Sidebar -->
                             <section>
                                 <header>
-                                    <h2>O que eu faço?</h2>
-                                    <h3>Principais atividades</h3>
+                                    <h2>Assuntos</h2>
                                 </header>
-                                <ul class="check-list">
-                                    <li>Engenheiro de sistemas <a href="http://www.gumga.com.br">(Gumga)</a></li>
-                                    <li>Aulas na gradução e pós-graduação</li>
-                                    <li>Software web, mobile e embarcado</li>
-                                    <li>Pesquisa</li>
-                                    <li>Consultoria</li>
+                                <ul class="link-list">                                    
+
+                                    <li><a href="#">Java</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                    <li><a href="#">Mongo</a></li>
+                                    <li><a href="#">Spring</a></li>
+                                    <li><a href="#">Android</a></li>
+
                                 </ul>
                             </section>
-                        </div>
-                        <div class="4u">
-
-                            <!-- Box #3 -->
-                            <section>
-                                <header>
-                                    <h2>Tecnologias</h2>
-                                    <h3>Algumas que gosto e recomendo</h3>
-                                </header>
-                                <ul class="quote-list">
-                                    <li>
-                                        <img src="images/pic06.jpg" alt="" />
-                                        <p>"Write once, run anywhere."</p>
-                                        <span>Linguagem Java</span>
-                                    </li>
-                                    <li>
-                                        <img src="images/pic07.jpg" alt="" />
-                                        <p>"The world's most popular mobile OS."</p>
-                                        <span>Android</span>
-                                    </li>
-                                    <li>
-                                        <img src="images/pic08.jpg" alt="" />
-                                        <p>"Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use Hardware and Software."</p>
-                                        <span>Arduino</span>
-                                    </li>
-                                </ul>
-                            </section>
-
                         </div>
                     </div>
                 </div>
@@ -209,6 +165,11 @@
         </div>
 
 
+
+
+        <!-- In production use:
+ <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+        -->
         <script src="bower_components/angular/angular.js"></script>  
         <script src="bower_components/angular-route/angular-route.js"></script>
 
@@ -218,7 +179,6 @@
         <script src="app/listaartigos/modulo.js"></script>
 
         <script src="app.js"></script>
-
 
 
     </body>
