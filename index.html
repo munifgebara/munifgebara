@@ -73,62 +73,48 @@
     <div id="features-wrapper" ng-controller="reposController">
         <div id="features">
             <div class="container">
-                Últimos Posts {{nome}}
                 <div class="row">
-                    <div class="3u">
+                    <div class="3u" ng-repeat="n in [0, 1, 2, 3] track by $index">
                         <!-- Feature #1 -->
                         <section>
-                            <a href="#" class="bordered-feature-image"><img src="images/pic01.jpg" alt="" /></a>
-                            <h2>()</h2>
+                            <a href="{{repos[n].svn_url}}" class="bordered-feature-image"><img src="images/pic0{{n%4+1}}.jpg" alt="" /></a>
+                            <h2><a href="{{repos[n].svn_url}}">({{repos[n].name}})</a> </h2>
+                            <h3>{{repos[n].pushed_at}}</h3>
                             <p>
-
+                                {{repos[n].description}}
                             </p>
                         </section>
-
-
-                    </div>
-                    <div class="3u">
-
-                        <!-- Feature #2 -->
-                        <section>
-                            <a href="#" class="bordered-feature-image"><img src="images/pic02.jpg" alt="" /></a>
-                            <h2>()</h2>
-                            <p>
-
-                            </p>
-                        </section>
-
-                    </div>
-                    <div class="3u">
-
-                        <!-- Feature #3 -->
-                        <section>
-                            <a href="#" class="bordered-feature-image"><img src="images/pic03.jpg" alt="" /></a>
-                            <h2>()</h2>
-                            <p>
-
-                            </p>
-                        </section>
-
-                    </div>
-                    <div class="3u">
-
-                        <!-- Feature #4 -->
-                        <section>
-                            <a href="#" class="bordered-feature-image"><img src="images/pic04.jpg" alt="" /></a>
-                            <h2>()</h2>
-                            <p>
-
-                            </p>
-                        </section>
-
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
+    <div id="features-wrapper" ng-controller="reposController">
+
+        <div id="features">
+
+            <div class="container">
+                <a href="https://www.youtube.com/channel/UC_tVoSnkjZbfjMgakCLXgew">Videos do Canal munif.com.br</a>
+                <div class="row">
+                    <div class="3u">
+                        <iframe class="bordered-feature-image" src="https://www.youtube.com/embed/2muEBZvcpqw" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="3u">
+                        <iframe class="bordered-feature-image" src="https://www.youtube.com/embed/bg_86IOumP4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="3u">
+                        <iframe class="bordered-feature-image" src="https://www.youtube.com/embed/7LOJD-9b658" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="3u">
+                        <iframe class="bordered-feature-image" src="https://www.youtube.com/embed/p99lEp8vuLU" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <!-- Content -->
     <div id="content-wrapper">
