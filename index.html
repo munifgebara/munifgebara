@@ -74,14 +74,25 @@
         <div id="features">
             <div class="container">
                 <div class="row">
-                    <div class="3u" ng-repeat="n in [0, 1, 2, 3] track by $index">
+                    <div class="col-md-1">
+                        Filtro
+                    </div>
+                    <div class="col-md-6">
+                        <input ng-model="query">
+                    </div>
+                    <div class="col-md-2 pull-right">
+                        {{msg}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="3u" ng-repeat="repo in repos | filter:query | limitTo:4">
                         <!-- Feature #1 -->
                         <section>
-                            <a href="{{repos[n].svn_url}}" class="bordered-feature-image"><img src="images/pic0{{n%4+1}}.jpg" alt="" /></a>
-                            <h2><a href="{{repos[n].svn_url}}">({{repos[n].name}})</a> </h2>
-                            <h3>{{repos[n].pushed_at}}</h3>
+                            <a href="{{repo.svn_url}}" class="bordered-feature-image"><img src="images/pic0{{$index%4+1}}.jpg" alt="" /></a>
+                            <h2><a href="{{repos.svn_url}}">{{repo.name}}</a></h2>
+                            <h3>{{repo.pushed_at}}</h3>
                             <p>
-                                {{repos[n].description}}
+                                {{repo.description}}
                             </p>
                         </section>
                     </div>
