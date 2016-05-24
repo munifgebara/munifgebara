@@ -112,17 +112,8 @@
             <div class="container">
                 <a href="https://www.youtube.com/channel/UC_tVoSnkjZbfjMgakCLXgew">Videos do Canal munif.com.br</a>
                 <div class="row">
-                    <div class="3u">
-                        <iframe class="bordered-feature-image" src="https://www.youtube.com/embed/2muEBZvcpqw" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="3u">
-                        <iframe class="bordered-feature-image" src="https://www.youtube.com/embed/bg_86IOumP4" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="3u">
-                        <iframe class="bordered-feature-image" src="https://www.youtube.com/embed/7LOJD-9b658" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="3u">
-                        <iframe class="bordered-feature-image" src="https://www.youtube.com/embed/p99lEp8vuLU" frameborder="0" allowfullscreen></iframe>
+                    <div class="3u" ng-repeat="video in videos | filter:query | limitTo:4>
+                        <iframe class="bordered-feature-image" src="https://www.youtube.com/embed/{{video.videoId}}" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
