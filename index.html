@@ -112,8 +112,11 @@
             <div class="container">
                 <a href="https://www.youtube.com/channel/UC_tVoSnkjZbfjMgakCLXgew">Videos do Canal munif.com.br</a>
                 <div class="row">
-                    <div class="3u" ng-repeat="video in videos | filter:query | limitTo:4>
-                        <iframe class="bordered-feature-image" src="{{'https://www.youtube.com/embed/'+video.videoId}}" frameborder="0" allowfullscreen></iframe>
+                  <!--  | filter:query | limitTo:4 -->
+                    <div class="3u" ng-repeat="video in videos.items | limitTo:4">
+                      <!-- {{'https:\/\/www.youtube.com\/embed'}} -->
+                      <div ng-bind-html="getIframeVideo(video)"></div>
+                        <!-- <iframe class="bordered-feature-image" src="{{'https://www.youtube.com/embed/'+video.videoId}}" frameborder="0" allowfullscreen></iframe> -->
                     </div>
                 </div>
             </div>
